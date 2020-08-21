@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+        <html lang="en">
+            <head>
+                    <title>Tanmay Banik</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--title icon-->
+  <link rel="icon" type="img/png" href="https://png.icons8.com/color/50/000000/user.png">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+
+  .container-fluid {
+      padding-top: 50px;
+      padding-bottom: 30px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .bg-pr {
+	      background: url("{{url_for('static', filename='bg4.jpg')}}") no-repeat;
+		  display:block;
+		  background-size:cover;
+		  width: 100%;
+		  height: 100%;
+  }
+  .prlx {
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  
+  }
+  
+  .inner {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+
+
+}
+  
+  </style>
+</head>
+<body>
+			<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="{{ url_for('home')}}">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('education')}}">Education</a></li>
+        <li><a href="{{ url_for('skill')}}">Skills</a></li>
+        <li><a href="{{ url_for('projects')}}">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container profile part -->
+<div class = "col-sm-3">
+<div class = "container-fluid bg-1 text-center">
+	<center>
+	  <img src=" {{url_for('static', filename='profile_pic.jpg')}} " class="img-responsive img-circle margin" style="display:inline" alt="profile pic" width="320" height="320">
+      <h1>Tanmay Banik</h1>
+      <h4>M.C.A.</h4>
+  </center>
+</div>
+</div>
+
+<!-- about me part-->
+<div class="container-fluid bg-pr text-center prlx " style="margin-top:80px">
+  <div class = "w3-animate-right">
+  <h2 class="margin" align="center">About me</h2>
+  <div class =" w3-animate-top " align="justify">
+    <p class = "inner" align="center">From a very young age building Mechanix I have loved to create, repair and fix things. I enjoy problem solving from small hobby projects to complex work tasks. I’m a student that loves to compete and I’m always up for a good challenge.<br> I am currently Chandigarh University and pursuing my Masters in Computer Application. I'm intrested in techical stuffs like new technologies in the market and about new programming languages introduced.</p>
+  <footer>
+  <div class="w3-xlarge w3-section w3-animate-left">
+    <a class="fa fa-linkedin w3-hover-opacity w3-hover-teal" href="https://www.linkedin.com/in/corvy/" target="_blank"></a><br>
+    <a class="fa fa-github w3-hover-opacity w3-hover-teal" href="https://github.com/Tan-thita" target="_blank"></a><br>
+    <a class="fa fa-facebook-official w3-hover-opacity w3-hover-teal" href="https://www.facebook.com/tanmay.banik" target="_blank"></a><br>
+    <a class="fa fa-twitter w3-hover-opacity w3-hover-teal" href="https://twitter.com/Tanmay_Banik" target="_blank"></a><br>
+  </div>
+  </footer>
+  </div>
+  </div>
+</div>
+
+ <!-- 3rd container -->
+<div class="w3-row-padding text-center bg-2"> 
+<h2 class = "container-fluid text-center" style="margin-bottom:-19px">Interests</h2><br>
+<div class="w3-row-padding text-center">
+ <p> - Programming <br>
+ - E-Sports <br>
+ - Reading <br>
+ - Technological Awareness <br>
+ - Travel <br>
+ - Music <br>
+  
+ </p>
+ </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+    <div class="quoteText">
+   “{{ quote }}”
+  <br>  ~{{ name }}
+</div>
+  </div>
+</footer>
+</body>
+</html>

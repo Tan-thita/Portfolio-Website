@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+        <html lang="en">
+            <head>
+                    <title>Tanmay Banik</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--title icon-->
+  <link rel="icon" type="img/png" href="https://png.icons8.com/color/50/000000/user.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  #makeLeft{
+float: left;
+}
+
+#makeRight{
+float: right;
+}
+
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+
+  .container-fluid {
+      padding-top: 50px;
+      padding-bottom: 30px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .bg-pr {
+	      background: url("{{url_for('static', filename='bg4.jpg')}}") no-repeat;
+		  display:block;
+		  background-size:cover;
+		  width: 100%;
+		  height: 100%;
+  }
+  
+  .bg-sk {
+	      background: url("{{url_for('static', filename='bg3.jpg')}}") no-repeat;
+		  display:block;
+		  background-size:cover;
+		  width: 100%;
+		  height: 100%;
+  }
+  .prlx {
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  
+  }
+  
+  .inner {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+
+
+}
+  
+  </style>
+</head>
+<body>
+			<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="{{ url_for('home')}}">Home</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('education')}}">Education</a></li>
+        <li><a href="{{ url_for('skill')}}">Skills</a></li>
+        <li><a href="{{ url_for('projects')}}">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--main comp Body -->
+
+<div class="container-fluid bg-pr prlx" style="margin-top:80px">
+ <h1 align="center">My Skills</h1>
+<h4 id="makeLeft">Languages</h4>
+<div class="w3-row-padding w3-margin-top ">
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='c.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">C</h5><h5 id="makeRight">Advanced</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='c++.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">C++</h5><h5 id="makeRight">Advanced</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='csh.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+      <h5 id="makeLeft">C#</h5><h5 id="makeRight">Beginner</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-row-padding w3-margin-top">
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='java.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">Java</h5><h5 id="makeRight">Intermediade</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='python.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">Python</h5><h5 id="makeRight">Intermediate</h5>
+      </div>
+    </div>
+  </div>
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='assembly.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">Assembly</h5><h5 id="makeRight">intermediate</h5>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<h4 id="makeLeft" class="w3-margin-top">Databases</h4>
+<div class="w3-row-padding w3-margin-top ">
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='mysql.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">MySql</h5><h5 id="makeRight">Intermediate</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='oracle.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">Oracle</h5><h5 id="makeRight">Intermediate</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='mongodb.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+      <h5 id="makeLeft">MongoDB</h5><h5 id="makeRight">Intermediate</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 id="makeLeft" class="w3-margin-top">Web Technologies</h4>
+<div class="w3-row-padding w3-margin-top ">
+<div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='flask.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">Python-Flask</h5><h5 id="makeRight">Intermediate</h5>
+      </div>
+    </div>
+  </div>
+  
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='js.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">JScripts</h5><h5 id="makeRight">Intermediate</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='cgi.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">CGI Scripts</h5><h5 id="makeRight">Intermediate</h5>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="w3-row-padding w3-margin-top">
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='bootstrap.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">Bootstrap</h5><h5 id="makeRight">Intermediade</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='html.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 id="makeLeft">HTML</h5><h5 id="makeRight">Intermediate</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 id="makeLeft" class="w3-margin-top">IDE</h4>
+<div class="w3-row-padding w3-margin-top ">
+<div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='netbeans.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 align="center">Netbeans</h5>
+      </div>
+    </div>
+  </div>
+  
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='codeblocks.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 align="center">CodeBlocks</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='andstd.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 align="center">Android Studio</h5>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  <div class="w3-row-padding w3-margin-top">
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='vscomm.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 align="center">Visual Studio Community</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h4 id="makeLeft" class="w3-margin-top">Code Editors</h4>
+<div class="w3-row-padding w3-margin-top ">
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='notepad++.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 align="center">Notepad++</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='stxt.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+        <h5 align="center">Sublime Text</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-third w3-hover-sepia w3-animate-zoom">
+    <div class="w3-card bg-3">
+      <img src="{{url_for('static', filename='vscode.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+      <div class="w3-container">
+      <h5 align="center">Visual Studio Code</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+    <div class="quoteText">
+    “{{ quote }}”
+  <br>  ~{{ name }}
+</footer>
+
+</body>
+</html>
